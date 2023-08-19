@@ -3,9 +3,7 @@ import { db } from './Config/firebase';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import { getDocs, collection } from 'firebase/firestore'
-import { BiUserCircle } from 'react-icons/bi'
-import { RiEditCircleLine } from 'react-icons/ri'
-import { FaRegTrashAlt } from 'react-icons/fa'
+import Card from './Components/Card/Card';
 
 function App() {
 
@@ -41,28 +39,9 @@ function App() {
       </div>
       <div>
         {
-          contacts.map((contact) => {
-            return <div key={contact.id} className="Container">
-              <div className="cardContainer">
-                <div className='leftSide'>
-                  <span>
-                    <BiUserCircle size={70}  color='#323334'/>
-                  </span>
-                  <div>
-                    <h1 className='heading1'>{contact.name}</h1>
-                    <h2 className='heading2'>{contact.email}</h2>
-                  </div>
-
-                </div>
-                <div className='rightSide'>
-                  <RiEditCircleLine size={55} />
-                  <FaRegTrashAlt size={50} color='#323334' />
-                </div>
-              </div>
-            </div>
-          })
+          contacts.map((contact) =>  {return <Card key={contact.id} contact={contact}/>})
         }
-      </div>
+      </div>  
     </>
   );
 }
