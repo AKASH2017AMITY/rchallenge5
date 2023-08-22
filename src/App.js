@@ -9,6 +9,7 @@ function App() {
 
   const [contacts, setContacts] = useState([]);
 
+
   useEffect(() => {
 
     const getContacts = async () => {
