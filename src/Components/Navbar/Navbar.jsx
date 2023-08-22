@@ -5,6 +5,10 @@ import AddContact from '../AddContact/AddContact';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // function handleClick(prev){
+  //   setIsOpen(!prev);
+  // }
   return (
     <>
       <nav className={styles.navbar}>
@@ -14,10 +18,10 @@ function Navbar() {
         </div>
         <div className={styles.right}>
           <input className={styles.search} type="search" placeholder='Search' />
-          <h1 className={styles.add} onClick={()=>setIsOpen(true)}>+</h1>
+          <h1 className={styles.add} onClick={()=>setIsOpen(true)} >+</h1>
         </div>
       </nav>
-      {isOpen && <AddContact isOpen={isOpen} setIsOpen={setIsOpen} />}
+      {isOpen && <AddContact isOpen={isOpen} setIsOpen={setIsOpen}  />}
     </>
   )
 }

@@ -10,7 +10,7 @@ function Card({contact}) {
               <div className={styles.cardContainer}>
                 <div className={styles.leftSide}>
                   <span>
-                    <BiUserCircle size={70}  color='#323334'/>
+                    <BiUserCircle size={70}  color={"#F6820C"}/>
                   </span>
                   <div>
                     <h1 className={styles.heading1}>{contact.name}</h1>
@@ -20,7 +20,7 @@ function Card({contact}) {
                 </div>
                 <div className={styles.rightSide}>
                   <RiEditCircleLine size={55} />
-                  <FaRegTrashAlt size={50} color='#323334' />
+                  <FaRegTrashAlt size={50} color='#323334' color={"#F6820C"}/>
                 </div>
               </div>
             </div>        
